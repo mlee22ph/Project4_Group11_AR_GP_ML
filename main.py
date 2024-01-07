@@ -1,8 +1,7 @@
 # Import our dependencies
-import matplotlib.pyplot as plt
-import numpy as np
+import streamlit as st
 import pandas as pd
-import seaborn as sns
+
 
 
 st.write("Hello ,let's learn how to build a streamlit app together")
