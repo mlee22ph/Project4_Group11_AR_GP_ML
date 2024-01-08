@@ -1,0 +1,11 @@
+lesion_id,image_id,dx,dx_type,age,sex,localization
+HAM_0000291,ISIC_0031360,nv,histo,75.0,female,lower extremity
+HAM_0004535,ISIC_0024364,nv,follow_up,45.0,male,upper extremity
+HAM_0003277,ISIC_0026890,nv,histo,30.0,male,upper extremity
+HAM_0004839,ISIC_0028450,nv,histo,55.0,male,back
+HAM_0005611,ISIC_0025850,nv,histo,35.0,female,lower extremity
+HAM_0000617,ISIC_0029703,nv,follow_up,75.0,male,trunk
+HAM_0007311,ISIC_0026367,nv,histo,45.0,male,face
+HAM_0001935,ISIC_0033067,nv,histo,50.0,male,chest
+HAM_0000721,ISIC_0030243,nv,histo,40.0,female,trunk
+HAM_0002151,ISIC_0029870,nv,follow_up,65.0,male,abdomen
