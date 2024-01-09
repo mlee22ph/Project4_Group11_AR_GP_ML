@@ -1,0 +1,8 @@
+lesion_id,image_id,dx,dx_type,age,sex,localization,diagnosis,result,result_label,diagnosis_no,image_id_with_extension
+HAM_0003996,ISIC_0025465,bkl,confocal,80.0,female,face,Benign keratosis-like lesions,0,Benign,1,ISIC_0025465.jpg
+HAM_0006518,ISIC_0027618,nv,follow_up,35.0,male,back,Melanocytic nevi,0,Benign,2,ISIC_0027618.jpg
+HAM_0005529,ISIC_0025980,df,consensus,55.0,female,lower extremity,Dermatofibroma,0,Benign,3,ISIC_0025980.jpg
+HAM_0000006,ISIC_0032187,mel,histo,70.0,male,back,Melanoma,1,Cancerous,4,ISIC_0032187.jpg
+HAM_0004542,ISIC_0024402,vasc,consensus,0.0,female,back,Vascular lesions,1,Cancerous,5,ISIC_0024402.jpg
+HAM_0000393,ISIC_0027865,bcc,histo,40.0,female,abdomen,Basal cell carcinoma,1,Cancerous,6,ISIC_0027865.jpg
+HAM_0001337,ISIC_0032455,akiec,histo,80.0,male,upper extremity,Actinic keratoses,1,Cancerous,7,ISIC_0032455.jpg
