@@ -77,9 +77,9 @@ def app():
     age_scaler = load('Model1/age_scaler.joblib')
 
     with st.container():
-        st.write("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
-        st.write("\nSkin Cancer Prediction App.")
-        st.write("\nSkin Cancer Prediction App.")
+        st.write("This model will integrate four critical parameters: diagnostic type, patient age, patient sex, and lesion location.")
+        st.write("\nSuch a model aims to assist in early-stage diagnosis, potentially improving patient outcomes.")
+        st.write("\nDeveloped for academic purpose, not a substitute for professional medical advice and diagnosis")
     
     additional_text = """
     This application has been created to fulfill the requirements of the Data Analytics Boot Camp hosted by UWA in 2023 and should not be interpreted as medical advice. 
@@ -94,12 +94,12 @@ def app():
 
     # User Inputs
     
-    dx_type = st.selectbox('Select Diagnosis Type', options=['Histo', 'Follow_up','Confocal','Consensus'], help='The type of method used to identify the leision') 
+    dx_type = st.selectbox('Select Diagnosis Type', options=['Histo', 'Follow_up','Confocal','Consensus'], help='The type of method used to identify the leision. The abbrevations are (histo) histopathology , (follow_up) follow-up examination, (consensus) expert consensus , (confocal) confocal microscopy.') 
     age = st.number_input('Enter Age', min_value=0, max_value=100, value=30, format='%i', key='age', help='Age in years')
     
     sex = st.selectbox('Select Sex', options=['Male', 'Female'], help='Male or Female')
     localization = st.selectbox('Select Localization', options=['Abdomen', 'Back', 'Chest', 'Ear','Face', 'Foot', 
-                                                                'Hand', 'Lower Extremity','Neck', 'Scalp', 'Trunk','Upper Extremity']
+                                                                'Hand', 'Lower extremity','Neck', 'Scalp', 'Trunk','Upper extremity']
                                                                 , help='The location of the leision on your body') 
 
 
@@ -147,9 +147,9 @@ def app():
     if st.button('Predict'):
         result = predict(dx_type, age, sex, localization)
         if result == 0:
-            st.success('The lesion is predicted to be Benign.')
+            st.success('This lesion has a possibility of being Benign.')
         else:
-            st.error('The lesion is predicted to be Malignant.')
+            st.error('This lesion has a possibility of being Malignant.')
 
     # Create a new row to display the additional text below the risk assessment tool
             
@@ -174,4 +174,4 @@ def image_to_base64(img):
 
 # Run the Streamlit app
 if __name__ == '__main__':
-    app()        
+    app()    
