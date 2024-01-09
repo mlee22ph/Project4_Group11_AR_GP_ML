@@ -39,7 +39,7 @@ This is a team effort with the following contributors:
 
 ### Objective
 
-Our objective is to provide early screening based on a few parameters and image to given an indication whether the person has skin cancer or not and what type of skin cancer.
+Our objective is to provide early screening based on a few parameters and image to give an indication whether the person has skin cancer or not and what type of skin cancer.
 
 ## Getting Started
 
@@ -47,7 +47,7 @@ Our objective is to provide early screening based on a few parameters and image 
 
 - Python (version 3.x recommended)
 - streamlit (Do !pip install streamlit if not done yet)
-- Install TensorFlow or use Google Colab
+- Install TensorFlow or use Google Colab to run Model3 jobs due to the large image size.
 - A modern web browser
 
 ### Installation
@@ -88,7 +88,7 @@ To get started with the dashboard:
 ## Approach
 
 ### Methodology
-- Refer to Project Workflow diagram.  [!Project Workflow](./Images/Project_Workflow.jpg)](https://github.com/mlee22ph/Project4_Group11_AR_GP_ML.git/blob/main/Images/Project_Workflow.jpg)
+- The project use the CRUD in data ETL, select the prediction and associated features.  Split the data to train and test, apply scaling, build model and make prediction.  Final step is model evaluation and further iteration to improve model prediction accuracy.
 
 **Data Acquisition and Analysis:**
 
@@ -101,13 +101,12 @@ To get started with the dashboard:
 
 **Data Processing and Database Creation:**
 
-5. **ETL Process:** The data gathered underwent an Extract, Transform, Load (ETL) process, primarily using Python's pandas library.
+3. **ETL Process:** The data gathered underwent an Extract, Transform, Load (ETL) process, primarily using Python's pandas library.
 - Refer to project schema diagram. [!Project Schema](./Images/ASX_top_ten_ERD.jpg)](https://github.com/mlee22ph/Project4_Group11_AR_GP_ML.git/blob/main/Images/ASX_top_ten_ERD.jpg)
 
 **Application Development and Deployment:**
 
-7. **API Development:** A Flask application was developed to generate APIs. These APIs allow for various queries, either targeting specific tables or joining them to fetch necessary data for our dashboard.
-8. **Front-End Development:** The dashboard's front end was created using Streamlit.
+4. **Front-End Development:** The dashboard's front end was created using Streamlit.
 
 
 ### Structure
@@ -117,28 +116,34 @@ To get started with the dashboard:
 
 ## Scripts 
 
-- `01_ASX_Top10_Dataframes_Historic.ipynb`: Jupyter notebook for retrieving top 10 companies per industry group and historical stock data.
-- `02_Retrive_ASX_Ticker_Fundamentals.ipynb`: Script for scraping fundamental data of ASX-listed companies.
-	- Total of 250 tickers were scraped.  Scraping done 10 tickers at a time and later merged to create the raw CSV file.
-	- various steps were taken to clean the dataset to create the final clean CSV file.
-	- `PE` column was computed using the formula `PE = lastPrice/EPS` and ensuring the value is zero if EPS is zero or Null.
-- `03_Creating_DataBase.ipynb`: Notebook detailing the creation of the database structure.
-	- 4 tables were created `industry_groups`, `top_ten`, `top_ten_historic` and `fundamental` in the `top_ten_asx.db` database. 
-- `app_solution.py`: The Flask application script.
-	- 4 json end points are created corresponding to the 4 tables.
-- `index.html`: Main HTML file that structures the web dashboard.
+- ETL Directory: Contains notebook used for ETL 
+	- `ETL.ipynb` - Jupyter notebook for extract, transform and load the data
+- Model 1 Directory: Contains all notebooks for skin cancer prediction using DecisionTree, LogisticRegression, RandomForest andd SVM, including saved models and encoders.
+	- `SkinCancerClasification.ipynb` - Jupyter notebook using NN model without scaling
 - Model 2 Directory: Contains all notebooks for skin cancer classification, including saved models and images
-	- SkinCancerClasification.ipynb - Jupyter notebook using NN model without scaling
- 	- SkinCancerClasificationNoOverSampler.ipynb - Jupyter notebook using NN model without scaling and without OverSampler
-  	- SkinCancerClasificationNoOverSamplerOptimised.ipynb - Jupyter notebook using NN model without scaling and without OverSampler but with optimised parameters to improve accuracy
-  	- SkinCancerClasificationNoOverSamplerWithScaling.ipynb - Jupyter notebook using NN model with scaling but without OverSampler 
-  	- SkinCancerClasificationNoOverSamplerWithScalingOptimised.ipynb - Jupyter notebook using NN model with scaling but without OverSampler and with optimised parameters to improve accuracy
-  	- SkinCancerClasificationWithScaling.ipynb - Jupyter notebook using NN model with scaling
-  	- SkinCancerClasificationWithScaling1stOptimisation.ipynb  - Jupyter notebook using NN model with scaling and with OverSampler and the initial optimisation to improve accuracy
-  	- SkinCancerClasificationWithScalingFinalOptimisation.ipynb  - Jupyter notebook using NN model with scaling and with OverSampler and the final optimisation to improve accuracy
-  	- SkinCancerClasificationWithScalingMoreOptimisations.ipynb  - Jupyter notebook using NN model with scaling and with OverSampler and the second to the last optimisation to improve accuracy
-  	- Models Directory containing all saved models for each notebook above
-  	- Images Directory containing all saved images for each notebook above
+	- `SkinCancerClasification.ipynb` - Jupyter notebook using NN model without scaling
+	- `SkinCancerClasificationNoOverSampler.ipynb` - Jupyter notebook using NN model without scaling and without OverSampler
+	- `SkinCancerClasificationNoOverSamplerOptimised.ipynb` - Jupyter notebook using NN model without scaling and without OverSampler but with optimised parameters to improve accuracy
+	- `SkinCancerClasificationNoOverSamplerWithScaling.ipynb` - Jupyter notebook using NN model with scaling but without OverSampler 
+	- `SkinCancerClasificationNoOverSamplerWithScalingOptimised.ipynb` - Jupyter notebook using NN model with scaling but without OverSampler and with optimised parameters to improve accuracy
+	- `SkinCancerClasificationWithScaling.ipynb` - Jupyter notebook using NN model with scaling
+	- `SkinCancerClasificationWithScaling1stOptimisation.ipynb`  - Jupyter notebook using NN model with scaling and with OverSampler and the initial optimisation to improve accuracy
+	- `SkinCancerClasificationWithScalingFinalOptimisation.ipynb`  - Jupyter notebook using NN model with scaling and with OverSampler and the final optimisation to improve accuracy
+	- `SkinCancerClasificationWithScalingMoreOptimisations.ipynb`  - Jupyter notebook using NN model with scaling and with OverSampler and the second to the last optimisation to improve accuracy
+	- Models Directory containing all saved models for each notebook above
+	- Images Directory containing all saved images for each notebook above
+- Model 3 Directory: Contains all notebooks for skin cancer image classification, including saved associated models and parameters. Please note that these notebooks were run in Google Colab and saved and copied here.  The directory path in the notebooks will need to be changed to make it work.
+	- `Model3_28_10000.ipynb` - Jupyter notebook using NN model using 10000 images with 28 by 28 pixel
+	- `Model3_28_350.ipynb` - Jupyter notebook using NN model using 350 images with 28 by 28 pixel
+- Resource Directory: Contains all data input and subsequent output.
+	- `HAM10000_metadata.csv` - metadata csv file downloaded from the kaggle.com
+	- `hmnist_28_28_RGB.csv` - RGB in 28x28 pixels csv file downloaded from the kaggle.com
+	- various other output and processed csv
+	- `test_1_image_per_dx` - folder containing 7 images one each per dx column.  Images used as input in final model saved.
+	- `train_50_images_per_dx` - folder containing 50 images each per dx column.  Used for the `Model3_28_350.ipynb` job.
+- Streamlit Directory: Contains all notebooks for streamlit app deployment with the following subfolders and file.
+	- streamlit_app2.py - streamlit code
+    
 
 
 ## Repository Structure
@@ -147,9 +152,17 @@ To get started with the dashboard:
 - **ETL Directory:**
 - **Model1 Directory:** Contains all the Skin Cancer Classification notebooksand other files
 - **Model2 Directory:**
-- **Model3 Directory:**
-- **Streamlit Directory:** Includes assets like `ASX_top_ten_ERD.jpg`.
-- **Resources Directory:** Contains datasets in csv format.
+- **Model3 Directory:** 
+- **Streamlit Directory:** Contains all notebooks for streamlit app deployment with the following subfolders and file.
+	- Images - skin_cancer.jpg for display
+	- Model1 - best model1 for deployment with parameter scaling and model saved.
+	- Resources - csv files
+- **Resources Directory:** Contains all data input and subsequent output.
+	- `HAM10000_metadata.csv` - metadata csv file downloaded from the kaggle.com
+	- `hmnist_28_28_RGB.csv` - RGB in 28x28 pixels csv file downloaded from the kaggle.com
+	- various other output and processed csv
+	- `test_1_image_per_dx` - folder containing 7 images one each per dx column.  Images used as input in final model saved.
+	- `train_50_images_per_dx` - folder containing 50 images each per dx column.  Used for the `Model3_28_350.ipynb` job.
 
 ## Data Sources and Copyright
 
@@ -169,7 +182,7 @@ This application has been created to fulfill the requirements of the Data Analyt
 
 ## Conclusion
 
-This Skin Cancer Prediction and Classification streamlit is able to offer early screeening for skin cancer prediction based on four criteria.  The classification using using images has not been able to yield reliable prediction and need further work to improve.
+This Skin Cancer Prediction and Classification streamlit is able to offer early screening for skin cancer prediction based on four criteria.  Classification using the RGB dataset produce robust result but the classification using images has not been able to yield reliable prediction and need further work to improve.
 
 ## References
 
