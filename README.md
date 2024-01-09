@@ -47,6 +47,7 @@ Our objective is to provide early screening based on a few parameters and image 
 
 - Python (version 3.x recommended)
 - streamlit (Do !pip install streamlit if not done yet)
+- Install TensorFlow or use Google Colab
 - A modern web browser
 
 ### Installation
@@ -62,6 +63,7 @@ To get started with the dashboard:
    ```
    !pip install streamlit
    !pip install kaggle
+   !pip install joblib
    ```
 
 ### Running the Application
@@ -105,13 +107,12 @@ To get started with the dashboard:
 **Application Development and Deployment:**
 
 7. **API Development:** A Flask application was developed to generate APIs. These APIs allow for various queries, either targeting specific tables or joining them to fetch necessary data for our dashboard.
-8. **Front-End Development:** The dashboard's front end was crafted using HTML for structure, JavaScript for interactivity, and CSS for formatting and aesthetics.
+8. **Front-End Development:** The dashboard's front end was created using Streamlit.
 
 
 ### Structure
 
-- **Backend:** Steamlit application 
-- **Frontend:** HTML for structure, JavaScript (including libraries like `Plotly` and [Chart.js](https://www.chartjs.org/) for dynamic features, and CSS for styling.
+- **Frontend:** Steamlit application
 
 
 ## Scripts 
@@ -140,10 +141,13 @@ To get started with the dashboard:
 
 ## Repository Structure
 
-- **Root Directory:** Contains the main application files like `index.html`, Jupyter notebooks (`01_ASX_Top10_Dataframes_Historic.ipynb`, etc.), and the Flask script `app_solution`.
-- **Images Directory:** Includes assets like `ASX_top_ten_ERD.jpg`.
-- **Static/js Directory:** Stores `plot.js` and `styles.css`.
-- **Resources Directory:** Contains datasets and the database file.
+- **Root Directory:** Readme and the main folders.
+- **ETL Directory:**
+- **Model1 Directory:** Contains all the Classification notebooks including an Image folder containing all images resulting from the notebooks
+- **Model2 Directory:**
+- **Model3 Directory:**
+- **Streamlit Directory:** Includes assets like `ASX_top_ten_ERD.jpg`.
+- **Resources Directory:** Contains datasets in csv format.
 
 ## Data Sources and Copyright
 
