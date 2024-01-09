@@ -127,23 +127,25 @@ To get started with the dashboard:
 - `app_solution.py`: The Flask application script.
 	- 4 json end points are created corresponding to the 4 tables.
 - `index.html`: Main HTML file that structures the web dashboard.
-- `plot.js`: script for fetching the neccesary data, plotting interactive charts, updating tables and initialising the dashboard.
-	- the url variables corresponding to the 4 json end points are declared.
-	- `fetchData()` - an asynchronous function design to fetchdata from url.
-	- `populateIndustryGroupDropdown()` - function designed to populate the industryGroups drowndown.
-	- `populateTickerDropdown()` - function designed to populate the ticker drowndown based on industryGroup selected.
-	- `updateStockInfo()` - function designed to populate the Stock Information per ticker.
-	- `updateTimeSeriesChart()` - function designed to create line chart per ticker
-	- `updateBarCharts()` - function designed to create bar charts for `Market Cap`, `EPS`, `DPS` and `PE`.
-	- `optionChanged()` - function to handle the change in dropdown value
-	- `initializePage()` - function to initialize the page
-- `styles.css` : script for formatting the dashboard
+- Model 2 Directory: Contains all notebooks for skin cancer classification, including saved models and images
+	- SkinCancerClasification.ipynb - Jupyter notebook using NN model without scaling
+ 	- SkinCancerClasificationNoOverSampler.ipynb - Jupyter notebook using NN model without scaling and without OverSampler
+  	- SkinCancerClasificationNoOverSamplerOptimised.ipynb - Jupyter notebook using NN model without scaling and without OverSampler but with optimised parameters to improve accuracy
+  	- SkinCancerClasificationNoOverSamplerWithScaling.ipynb - Jupyter notebook using NN model with scaling but without OverSampler 
+  	- SkinCancerClasificationNoOverSamplerWithScalingOptimised.ipynb - Jupyter notebook using NN model with scaling but without OverSampler and with optimised parameters to improve accuracy
+  	- SkinCancerClasificationWithScaling.ipynb - Jupyter notebook using NN model with scaling
+  	- SkinCancerClasificationWithScaling1stOptimisation.ipynb  - Jupyter notebook using NN model with scaling and with OverSampler and the initial optimisation to improve accuracy
+  	- SkinCancerClasificationWithScalingFinalOptimisation.ipynb  - Jupyter notebook using NN model with scaling and with OverSampler and the final optimisation to improve accuracy
+  	- SkinCancerClasificationWithScalingMoreOptimisations.ipynb  - Jupyter notebook using NN model with scaling and with OverSampler and the second to the last optimisation to improve accuracy
+  	- Models Directory containing all saved models for each notebook above
+  	- Images Directory containing all saved images for each notebook above
+
 
 ## Repository Structure
 
 - **Root Directory:** Readme and the main folders.
 - **ETL Directory:**
-- **Model1 Directory:** Contains all the Classification notebooks including an Image folder containing all images resulting from the notebooks
+- **Model1 Directory:** Contains all the Skin Cancer Classification notebooksand other files
 - **Model2 Directory:**
 - **Model3 Directory:**
 - **Streamlit Directory:** Includes assets like `ASX_top_ten_ERD.jpg`.
