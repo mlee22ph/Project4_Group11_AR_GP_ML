@@ -1,4 +1,4 @@
-# Skein Cancer Prediction and Classification
+# Skin Cancer Prediction and Classification
 
 Project4 - UWA/edX Data Analytics Bootcamp
 
@@ -47,8 +47,6 @@ Our objective is to provide early screening based on a few parameters and image 
 
 - Python (version 3.x recommended)
 - streamlit (Do !pip install streamlit if not done yet)
-- yfinance library - for running the file `01_ASX_Top10_Dataframes_Historic`
-- ([Flask-Cors](https://pypi.org/project/Flask-Cors/)) installation 
 - A modern web browser
 
 ### Installation
@@ -153,22 +151,23 @@ To get started with the dashboard:
 
 The data used in this dashboard is sourced from the following:
 
-- **Australian Securities Exchange (ASX)**: Used to identify the top 10 companies per industry group. Please note that ASX uses industry group while Market Index uses sector.  Available at: [ASX Directory](https://www.asx.com.au/markets/trade-our-cash-market/directory).
-- **Yahoo Finance**: Financial information for each ticker was retrieved using the `yfinance` library, which provides a reliable method of data scraping.
-- **Market Index**: For comprehensive financial details per ticker, we scraped data from [Market Index](https://www.marketindex.com.au/asx-listed-companies).
+- **kaggle.com**: The dataset was taken from kaggle.com but was originally taken from Harvard Unversity.
+(https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/DBW86T).
 
 
 ### Copyright Notice
 
-The data presented in this dashboard is the property of the respective data providers, including the Australian Securities Exchange and Yahoo Finance. The information provided by this dashboard is for informational/ educational purposes only and is not intended for trading or investment advice. We do not hold any responsibility for financial decisions made based on the information provided by our dashboard. 
+This application has been created to fulfill the requirements of the Data Analytics Boot Camp hosted by UWA in 2023 and should not be interpreted as medical advice. 
+    Working with a limited dataset, time and expertise the information provided by this app may not be entirely accurate, as the primary intention was to implement and demonstrate the skills learned during the course. The focus was more on skill application rather than ensuring the accuracy of the data predictions. 
+    This project is primarily meant for exploring and showcasing the student's knowledge, rather than providing reliable medical analysis or advice. rediciton is
 
 ## Conclusion
 
-This dashboard exemplifies the integration of data science and web technologies in creating a user-friendly and informative tool for stock market analysis. We look forward to further enhancing its capabilities and adding more features in the future.
+This Skin Cancer Prediction and Classification streamlit is able to offer early screeening for skin cancer prediction based on four criteria.  The classification using using images has not been able to yield reliable prediction and need further work to improve.
 
 ## References
 
 - Codes and approaches inspired by lecture notes and ChatGPT.
-- [1] yfinance Python Tutorial (2023) [https://analyzingalpha.com/yfinance-python]
+
 
 

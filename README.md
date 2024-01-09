@@ -1,4 +1,4 @@
-# Skein Cancer Prediction and Classification
+# Skin Cancer Prediction and Classification
 
 Project4 - UWA/edX Data Analytics Bootcamp
 
@@ -47,8 +47,6 @@ Our objective is to provide early screening based on a few parameters and image 
 
 - Python (version 3.x recommended)
 - streamlit (Do !pip install streamlit if not done yet)
-- yfinance library - for running the file `01_ASX_Top10_Dataframes_Historic`
-- ([Flask-Cors](https://pypi.org/project/Flask-Cors/)) installation 
 - A modern web browser
 
 ### Installation
@@ -153,9 +151,8 @@ To get started with the dashboard:
 
 The data used in this dashboard is sourced from the following:
 
-- **Australian Securities Exchange (ASX)**: Used to identify the top 10 companies per industry group. Please note that ASX uses industry group while Market Index uses sector.  Available at: [ASX Directory](https://www.asx.com.au/markets/trade-our-cash-market/directory).
-- **Yahoo Finance**: Financial information for each ticker was retrieved using the `yfinance` library, which provides a reliable method of data scraping.
-- **Market Index**: For comprehensive financial details per ticker, we scraped data from [Market Index](https://www.marketindex.com.au/asx-listed-companies).
+- **kaggle.com**: The dataset was taken from kaggle.com but was originally taken from Harvard Unversity.
+(https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/DBW86T).
 
 
 ### Copyright Notice
@@ -171,6 +168,6 @@ This Skin Cancer Prediction and Classification streamlit is able to offer early 
 ## References
 
 - Codes and approaches inspired by lecture notes and ChatGPT.
-- [1] yfinance Python Tutorial (2023) [https://analyzingalpha.com/yfinance-python]
+
 
 
