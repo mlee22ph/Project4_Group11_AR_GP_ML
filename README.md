@@ -163,6 +163,7 @@ To get started with the dashboard:
 	- various other output and processed csv
 	- `test_1_image_per_dx` - folder containing 7 images one each per dx column.  Images used as input in final model saved.
 	- `train_50_images_per_dx` - folder containing 50 images each per dx column.  Used for the `Model3_28_350.ipynb` job.
+- `Skin Cancer Prediction and Classification.pdf` - Final project presentation slides.
 
 ## Data Sources and Copyright
 
